@@ -1,5 +1,5 @@
 <script>
-    import { slide } from "svelte/transition";
+    //import { slide } from "svelte/transition";
 
     let text = "";
 
@@ -306,7 +306,8 @@ function reset() {
                     <h2>{p.year}</h2>
                 </div> 
                 {#if p.is_visible}
-                    <div transition:slide="{{y: p.is_visible ? 0 : 100}}">
+                   <!-- <div transition:slide="{{y: p.is_visible ? 0 : 100}}"> -->
+                    <div>
                         {#each p.events as e (e.id)}
                             <div class='event'>
                                 <div class='cursor center' on:click={() => toggle_event(p.id, e.id)}>
@@ -314,7 +315,8 @@ function reset() {
                                     <h4>{e.year}</h4>
                                 </div>
                                 {#if e.is_visible}
-                                    <div transition:slide="{{y: e.is_visible ? 0 : 100}}">
+                                    <!-- <div transition:slide="{{y: e.is_visible ? 0 : 100}}"> -->
+                                    <div>
                                         <li><b>Definition: </b>
                                             <!-- {e.description.definition} -->
                                             {#each split_str_by_substr(e.description.definition, text) as t (t.id)}

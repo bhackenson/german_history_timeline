@@ -1,10 +1,11 @@
 {
 	"name": "final-project-2",
+	"homepage": "https://bhackenson.github.io/german_history_timeline/",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "svelte-kit build",
+		"build": "vite build",
 		"preview": "vite preview",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build"
